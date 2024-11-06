@@ -1,0 +1,22 @@
+.container{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.inner-container{
+    background-color: green;
+    border-radius: 5px;
+}
+.container .inner-container input[type="button"]{
+    margin: 10px;
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
+}
+.container .inner-container h2{
+    text-align: center;
+}
+.container .inner-container p{
+    margin: 10px;
+}

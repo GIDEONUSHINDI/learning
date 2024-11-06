@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="java.css" >
+    <title>java tutorial</title>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="inner-container">
+            <h2>Java</h2><hr>
+            <h3 id="heading">Introduction to Java</h3>
+            <div class="notes" id="notes">
+                <p id="notes1"></p>
+            </div>
+            <input type="button" value="Back" class="back" onclick="backFunction()" />
+            <input type="button" value="Next" class="next" onclick="nextFunction()" />
+        </div>
+    </div>
+
+<script>
+    note1 = "Java is a high-level, object-oriented programming language that was first developed by James Gosling and his team at Sun Microsystems (now owned by Oracle Corporation) in the mid-1990s. Java has become one of the most popular programming languages due to its portability, ease of use, and robustness." + 
+    '<h2>Key Features of Java:</h2>' + 
+    '<p>1. Write Once, Run Anywhere (WORA): One of the most notable features of Java is its platform independence. Java programs are compiled into bytecode, which can run on any platform that has a Java Virtual Machine (JVM). This means you can write code on one machine and run it on another, regardless of the underlying hardware and operating system.</p>' + 
+    '2.Object-Oriented Programming (OOP): Java is an object-oriented language, which means it is based on the concept of objects (instances of classes) and classes (blueprints for creating objects). The four fundamental principles of OOP are:'+
+
+    'a.Encapsulation: Hiding internal object details and showing only essential features.<br>'+
+   'b.Inheritance: Creating new classes based on existing ones.<br>'+
+   'c.Polymorphism: Using a single entity to represent different forms.<br>'+
+   'd.Abstraction: Hiding the complex implementation details and showing only the necessary features.';
+    notes2 = "Java development relies on a variety of tools that help developers write, compile, debug, and deploy their applications efficiently. These tools range from integrated development environments (IDEs) to build tools, version control systems, and deployment tools. Below is an overview of some commonly used tools in Java development";
+    note3 = '<code><pre>' +
+        'public class FirstProgram{<br>public static void main(string args[])<br>{<br>' +
+
+        'System.out.print("Hello World!");<br>}<br>}'+
+        '</pre></code>';
+    note4 = '<code><pre>import java.util.Scanner<br>' + 
+            'public class AddTwoNumbers{<br>public static void main(string args[])<br>{<br>Scanner scanner = new Scanner(System.in);<br>int num1 = scanner.nextInt();<br>' +
+            'System.out.print("Enter the first number: ");<br> int num1 = scanner.nextInt();<br>System.out.print("Enter the second number: ");<br> int num2 = scanner.nextInt();<br>'+
+            ' int sum = num1 + num2;<br> System.out.println("The sum of"+num1+" and "+num2+" is: " + sum);<br> scanner.close();<br>'+
+        '<br>}<br>}</pre></code>'
+    var notes = document.getElementById("notes");
+    var notes1 = document.getElementById("notes1");
+    var heading = document.getElementById("heading");
+    var notesHeading = ["Introduction to Java", "Tools for Java", "First Program","Program To Add Two Numbers"];
+    var notesArray = [note1, notes2, note3, note4];
+    notes1.innerHTML = note1;
+    var currentIndex = 0;
+    var currentIndex2 = 0;
+
+    function nextFunction(){
+        currentIndex = (currentIndex + 1) % notesArray.length;
+        currentIndex2 = (currentIndex2 + 1) % notesHeading.length;
+        notes1.innerHTML = notesArray[currentIndex];
+        heading.textContent = notesHeading[currentIndex2];
+    }
+    function backFunction(){
+        currentIndex = (currentIndex - 1 + notesArray.length) % notesArray.length;
+        currentIndex2 = (currentIndex2 - 1 + notesHeading.length) % notesHeading.length;
+        notes1.innerHTML = notesArray[currentIndex];
+        heading.textContent = notesHeading[currentIndex2];
+        
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+.container{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.inner-container{
+    background-color: green;
+    border-radius: 5px;
+}
+.container .inner-container h2{
+    text-align: center;
+}
+.container .inner-container h3{
+    margin: 10px;
+}
+.container .inner-container .notes{
+    background-color: aliceblue;
+    margin: 10px;
+    border-radius: 5px;
+    max-width: 500px;
+}
+.container .inner-container .back{
+    width: 80px;
+    height: 40px;
+    margin: 10px;
+}
+.container .inner-container .next{
+    width: 80px;
+    height: 40px;
+    float: right;
+    margin: 10px;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="myAlgorithm.css" >
+    <title>algorithms</title>
+</head>
+<body>
+    <div class="container">
+        <div class="inner-container">
+            <h3>Queue and Stack data structures</h3><hr>
+            <p id="myArray">Array</p>
+            <p id="results">Results</p>
+            <input type="button" value="Push" onclick="pushFunction()" />
+            <input type="button" value="Pop"  onclick="popFunction()"/>
+            <input type="button" value="IsEmpty" onclick="IsEmptyFunction()" />
+            <input type="button" value="Size" onclick="sizeFunction()"/>
+        </div>
+    </div>
+<script>
+var myArray = document.getElementById("myArray");
+var results = document.getElementById("results");
+var array1 = [67, 98, 45, 89, 34];
+myArray.innerText = array1;
+
+function pushFunction(){
+    var randomNumber = Math.floor(Math.random(0) * 100);
+    array1.push(randomNumber);
+    myArray.innerText = array1;
+    results.innerText = array1.length;
+}
+function popFunction(){
+    
+    if(array1.length != 0){
+        array1.pop();
+        myArray.innerText = array1;
+        results.innerText = array1.length;
+    }
+    else{
+        myArray.innerText = "[]";
+        results.innerText = array1.length;
+    }
+}
+function IsEmptyFunction(){
+    if(array1.length == 0){
+        results.innerText = "True";
+    }
+    else{
+        results.innerText = "False";
+    }
+}
+function sizeFunction(){
+    results.innerText = array1.length;
+}
+</script>
+</body>
+</html>
