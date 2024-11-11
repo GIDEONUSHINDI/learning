@@ -8,6 +8,9 @@
     background-color: green;
     border-radius: 5px;
 }
+.container .inner-container hr{
+    color: aliceblue;
+}
 .container .inner-container input[type="button"]{
     margin: 10px;
     width: 120px;

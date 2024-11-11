@@ -1,0 +1,45 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+.inner-container{
+    background-color: green;
+    border-radius: 5px;
+    width: 500px;
+}
+.inner-container:hover{
+    background-image: linear-gradient(180deg, green, aliceblue);
+}
+.container .inner-container hr{
+    color: aliceblue;
+}
+.container .inner-container h2{
+    text-align: center;
+    color: aliceblue;
+}
+.container .inner-container input[type="email"]{
+    width: 95%;
+    margin: 10px;
+}
+.container .inner-container input[type="text"]{
+    width: 95%;
+    margin: 10px;
+}
+.container .inner-container input[type="submit"]{
+    width: 95%;
+    margin: 10px;
+    height: 40px;
+}
+.container .inner-container label{
+    margin: 10px;
+    font-size: 20px;
+}
+.btn-custom{
+    background-color: aliceblue;
+}
+.btn-custom:hover{
+    background-color: black;
+    color: aliceblue;
+}

@@ -1,0 +1,21 @@
+.dashboard{
+    background-color: black;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: green;
+}
+.tutorial-dash{
+    margin: 10px;
+    width: 90%;
+}
+.profile{
+    background-color: black;
+    border-radius: 5px;
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    text-align: center;
+    color: aliceblue;
+    border-style: solid;
+    border-color: green;
+}
